@@ -1,0 +1,9 @@
+name: HubCommandSynapse
+main: main\Main
+version: 1.0.0
+api: 2.0.0
+author: NycuRO
+commands:
+  hub:
+    description: "Transfer to HUB ,for Synapse."
+    aliases: [lobby]
