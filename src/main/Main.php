@@ -21,7 +21,11 @@ class Main extends PluginBase{
   public function onCommand(CommandSender $s, Command $cmd, $label, array $args){
     switch($cmd->getName()){
       case "hub":
-        $player->transfer(HUB);
+        $this->getServer()->getSynapse()->getClientData();
+        $player = $this->getServer()->getPlayerExact($args[0]);
+        $des = $this->getDescriptionByListData(HUB);
+        $hash = $this->getClientHashByDescription($des)
+        $player->transfer($hash)
         break;
     }
   }
