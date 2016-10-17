@@ -21,7 +21,7 @@ class Main extends PluginBase{
   public function onCommand(CommandSender $s, Command $cmd, $label, array $args){
     switch($cmd->getName()){
       case "hub":
-	$this->transfer($this->server->getClients()[$ev->getClientHash()]);
+	$this->getServer()->getPluginManager()->getPlugin("SynapseTransfer")->transfer($player, "HUB", C::GREEN."You Are transfered to HUB with succes!");
 	break;
       default:
 	$this->redirectPacket($pk->buffer);
