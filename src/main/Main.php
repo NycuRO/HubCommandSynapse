@@ -44,9 +44,9 @@ class Main extends PluginBase{
     switch($cmd->getName()){
       case "hub":
         $this->transfer($this->server->getClients()[$ev->getClientHash()]);
-				break;
-			default:
-				$this->redirectPacket($pk->buffer);
+		    break;
+		    default:
+		    $this->redirectPacket($pk->buffer);
     }
   }
 }
