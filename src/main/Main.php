@@ -22,10 +22,10 @@ class Main extends PluginBase{
     switch($cmd->getName()){
       case "hub":
         $this->getServer()->getSynapse()->getClientData();
-        $player = $this->getServer()->getPlayerExact($args[0]);
+        $p = $this->getServer()->getPlayerExact($args[0]);
         $des = $this->getDescriptionByListData(HUB);
         $hash = $this->getClientHashByDescription($des)
-        $player->transfer($hash)
+        $p->transfer($hash)
         break;
     }
   }
